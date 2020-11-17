@@ -1,0 +1,50 @@
+
+<table>
+
+  <tr>
+    <td>
+      <input type="text" [(ngModel)]='num1' placeholder="Enter value in Rupee" name="num1" (keypress)="numberOnly($event)" >
+      </td>
+      <td>
+
+  <select (change)="onCurrancyChange($event)">
+    <option *ngFor ='let cur of currancy' [value]="cur.Id" >
+    {{cur.Name}}
+    </option>
+    </select>
+
+     </td>
+  
+  </tr>
+  
+  <br/>
+  <br/>
+
+<tr>
+    <td *ngIf="result">
+    <h2> The converted Currancy value is:  {{result}} </h2>  
+    </td>
+</tr>
+
+  </table>
+  
+
+
+  <table  class="margin-top-8">
+    <tr>
+      <td>   <h4>Considered 1 dollars =75 rupees</h4> </td>
+    </tr>
+    <tr>
+      <td>   <h4> Considered 1 Euro =90 rupees</h4> </td>
+    </tr>
+    <tr>
+      <td>   <h4> Considered 1 pound =100 rupees</h4> </td>
+    </tr>
+    <tr>
+      <td>   <h4> Considered 1 rand = 4 rupees</h4> </td>
+    </tr>
+
+  </table>
+  
+ 
+ 
